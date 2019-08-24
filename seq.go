@@ -2,8 +2,8 @@ package seq
 
 type Seq struct{ xs []string }
 
-func New(e string) Seq {
-	return Seq{xs: []string{e}}
+func New(es ...string) Seq {
+	return Seq{xs: es}
 }
 
 func (s Seq) Map(fi interface{}, args ...interface{}) Seq {

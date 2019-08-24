@@ -13,9 +13,9 @@ func TestSeqCreated(t *testing.T) {
 }
 
 func TestMap(t *testing.T) {
-	s := seq.New("East")
+	s := seq.New("East", "West")
 	s.Map(strings.ToLower)
-	assert.Equal(t, s.Map(strings.ToLower).ToSlice(), []string{"east"})
+	assert.Equal(t, s.Map(strings.ToLower).ToSlice(), []string{"east", "west"})
 }
 
 func TestMapChain(t *testing.T) {
